@@ -1,0 +1,31 @@
+<h2>
+  welcome {{title}}
+</h2>
+<button (click) = "onClick($event)">Greeting</button>
+<button (click) = "greeting='welcome navya'">Greeting</button>
+{{greeting}}
+
+<h2 *ngIf = "displayName; else elseBlock ">
+  Ngif condition checking
+</h2>
+<ng-template #elseBlock>
+<h2>
+  Ngelse name is hiddden
+</h2>
+</ng-template>
+
+<h3>Ng-Switch case</h3>
+
+<div [ngSwitch]="color">
+  <div *ngSwitchCase="'red'">You picked red color</div>
+  <div *ngSwitchCase="'blue'">You Picked blue color</div>
+  <div *ngSwitchDefault>Pick again</div>
+
+
+
+  <h3> NgFor directive</h3>
+  <div *ngFor = "let color of colors; prime as f">
+    <h2 [style.backgroundColor]="color"> {{f}} {{color}}</h2> 
+
+  </div>
+</div>

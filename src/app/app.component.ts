@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from './../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = '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';
+  constructor() {
+    // console.log(environment.apiUrl);
+    
+  }
+  title = 'Navya Rani';
+  public name = "parent name"
+  public message ="";
+  
 }
